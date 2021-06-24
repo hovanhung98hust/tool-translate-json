@@ -4,11 +4,20 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:translator/translator.dart';
+import 'package:translator_json/add_const.dart';
+import 'package:translator_json/const.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  final data = await loadFileAndTranslateText();
+  // final data = await loadFileAndTranslateText();
+  // print(data);
+
+  // final data = AddConst.convertConstToJson(MyConst.dataConst);
+  // print(data);
+
+  final data = AddConst.changeFileConst(MyConst.dataJson);
   print(data);
+
   Clipboard.setData(ClipboardData(text: "$data"));
 }
 
