@@ -15,7 +15,10 @@ void main() async {
   // final data = AddConst.convertConstToJson(MyConst.dataConst);
   // print(data);
 
-  final data = AddConst.changeFileConst(MyConst.dataJson);
+  // final data = AddConst.changeFileConst(MyConst.dataJson);
+  // print(data);
+
+  final data = AddConst.convertConstValueToConstKey(MyConst.dataConst);
   print(data);
 
   Clipboard.setData(ClipboardData(text: "$data"));
